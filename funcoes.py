@@ -75,6 +75,7 @@ def posiciona_frota(frota):
                 tabuleiro[linha][coluna]=1        
     resultado=tabuleiro
     return resultado
+# ex5
     
     
 
