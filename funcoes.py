@@ -44,7 +44,6 @@ frota = {
 }
 def preenche_frota(frota, nome_navio, linha, coluna, orientacao, tamanho):
     lista= define_posicoes(linha, coluna, orientacao, tamanho)
-    
-        if nome_navio not in frota:
+    if nome_navio not in frota:
         frota[nome_navio]=lista
     return frota
