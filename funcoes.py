@@ -47,4 +47,3 @@ tabuleiro = [
 ]
 def faz_jogada(tabuleiro,linha,coluna):
      if tabuleiro[linha][coluna] == 1:
-         
