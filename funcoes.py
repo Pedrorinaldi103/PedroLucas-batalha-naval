@@ -1,3 +1,4 @@
+#ex1
 grid = [
       [0,0,0,0,0,0,0,0,0,0],
       [0,0,0,0,0,0,0,0,0,0],
@@ -22,7 +23,7 @@ def define_posicoes(linha, coluna, orientacao, tamanho):
             posicao.append([linha,coluna])
     return posicao
 
-
+#ex2
 def preenche_frota(frota, nome_navio, linha, coluna, orientacao, tamanho):
     lista= define_posicoes(linha, coluna, orientacao, tamanho)
     if nome_navio not in frota:
@@ -31,3 +32,19 @@ def preenche_frota(frota, nome_navio, linha, coluna, orientacao, tamanho):
         frota[nome_navio].append(lista)
     return frota
 
+#ex3
+tabuleiro = [
+  [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+  [0, 1, 0, 0, 0, 1, 1, 1, 1, 0],
+  [0, 1, 0, 1, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 1, 0, 1, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+  [0, 1, 1, 1, 0, 0, 0, 1, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+  [0, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+]
+def faz_jogada(tabuleiro,linha,coluna):
+     if tabuleiro[linha][coluna] == 1:
+         
