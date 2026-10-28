@@ -53,3 +53,33 @@ def faz_jogada(tabuleiro,linha,coluna):
     return tabuleiro
 
 #ex4
+def posiciona_frota(frota):
+    tabuleiro = [
+    [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+    [0, 1, 0, 0, 0, 1, 1, 1, 1, 0],
+    [0, 1, 0, 1, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 1, 0, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+    [0, 1, 1, 1, 0, 0, 0, 1, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 1, 0, 0, 0, 0, 1],
+    [0, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+    ]
+    for nome in frota:
+        lista=frota[nome]
+        for i in range(len(lista)):
+            for k in range(len(lista[i])):
+                linha=lista[i][k][0]
+                coluna=lista[i][k][1]
+                tabuleiro[linha][coluna]=1        
+    resultado=tabuleiro
+    return resultado
+
+    
+
+                
+            
+            
+        
+        
