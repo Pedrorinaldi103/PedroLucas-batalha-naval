@@ -94,16 +94,15 @@ def afundados(frota , tabuleiro):
             if contador>=len(l[i]):
               resultado+=1
     return resultado
-
-
-                
-            
-                
-    
-    
-
-                
-            
-            
-        
-      
+#ex6
+def posicao_valida(frota, linha, coluna, orientacao, tamanho):
+    posiçao=define_posicoes(linha, coluna, orientacao, tamanho)
+    for nome in frota:
+        l=frota[nome]
+        for i in range(len(l)):
+                for j in range(len(l[i])):
+                    for a in range(len(posiçao)):
+                        if l[i][j]==posiçao[a]:
+                            return False
+                        else:
+                            return True
