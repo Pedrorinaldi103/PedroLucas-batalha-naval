@@ -76,6 +76,29 @@ def posiciona_frota(frota):
     resultado=tabuleiro
     return resultado
 # ex5
+def afundados(frota , tabuleiro):
+    lista=[]
+    for i in range(len(tabuleiro)):
+        for j in range(len(tabuleiro)):
+            if tabuleiro[i][j]=="X":
+                lista1=[i,j]
+                lista.append(lista1)
+    resultado=0
+    for nome in frota:
+        l=frota[nome]
+        for i in range(len(l)):
+            contador=0
+            for j in range(len(l[i])):
+                if l[i][j] in lista:
+                    contador+=1
+            if contador>=len(l[i][j]):
+              resultado+=1
+    return resultado
+
+
+                
+            
+                
     
     
 
