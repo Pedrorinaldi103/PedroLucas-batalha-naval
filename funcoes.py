@@ -97,6 +97,10 @@ def afundados(frota , tabuleiro):
 #ex6
 def posicao_valida(frota, linha, coluna, orientacao, tamanho):
     posiçao=define_posicoes(linha, coluna, orientacao, tamanho)
+    for a in range(len(posiçao)):
+        if posiçao[a][0]>9 or posiçao[a][1]>9 or posiçao[a][0]<0 or posiçao[a][1]<0:
+            return False
+
     for nome in frota:
         l=frota[nome]
         for i in range(len(l)):
@@ -104,5 +108,4 @@ def posicao_valida(frota, linha, coluna, orientacao, tamanho):
                     for a in range(len(posiçao)):
                         if l[i][j]==posiçao[a]:
                             return False
-                        else:
-                            return True
+    return True
