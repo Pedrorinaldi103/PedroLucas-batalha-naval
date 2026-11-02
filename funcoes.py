@@ -109,3 +109,28 @@ def posicao_valida(frota, linha, coluna, orientacao, tamanho):
                         if l[i][j]==posiçao[a]:
                             return False
     return True
+#ex7
+frota = {}
+
+navios =  {
+    "porta-aviões" : [1,4],
+    "navio-tanque": [2,3],
+    "contratorpedeiro": [3,2],
+    "submarino": [4,1],
+}
+
+for nome in navios:
+    qtd = navios[nome][0]
+    tamanho = navios[nome][1]
+
+for i in range(9):
+    verifica = False
+    while verifica == False:
+        print(f"Insira as informações referentes ao navio {nome} que possui tamanho {tamanho}")
+        linha = int(input("Linha: "))
+        coluna = int(input("Coluna: "))
+        orientação = int(input("[1] Vertical [2] Horizontal >"))
+        if orientação == 1:
+            orientação = "vertical"
+        elif orientação == 2:
+            orientação = "horizontal"
