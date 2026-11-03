@@ -37,7 +37,7 @@ for nome in navios:
     qtd = navios[nome][0]
     tamanho = navios[nome][1]
 
-for i in range(9):
+for i in range(qtd):
     verifica = False
     while verifica == False:
         
