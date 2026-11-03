@@ -9,7 +9,7 @@ navios =  {
     "submarino": [4,1],
 }
 
-for nome,listas in navios.items:
+for nome,listas in navios.items():
     qtd = listas[0]
     tamanho = listas[1]
 
