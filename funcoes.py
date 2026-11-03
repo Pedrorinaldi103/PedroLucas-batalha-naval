@@ -126,11 +126,25 @@ for nome in navios:
 for i in range(9):
     verifica = False
     while verifica == False:
+        
         print(f"Insira as informações referentes ao navio {nome} que possui tamanho {tamanho}")
         linha = int(input("Linha: "))
         coluna = int(input("Coluna: "))
-        orientação = int(input("[1] Vertical [2] Horizontal >"))
-        if orientação == 1:
-            orientação = "vertical"
-        elif orientação == 2:
-            orientação = "horizontal"
+        
+        if nome != "submarino":
+            orientacao = int(input("[1] Vertical [2] Horizontal >")) 
+            if orientacao == 1:
+                orientacao = "vertical"
+            elif orientacao == 2:
+                orientacao = "horizontal"
+        else:
+            orientacao = "horizontal"
+
+        verifica = posicao_valida(frota, linha, coluna, orientacao, tamanho)
+        if verifica == False:
+            print("Esta posição não está válida!")
+
+    posicao_navio = define_posicoes(linha, coluna, orientacao, tamanho)
+    if nome not in frota:
+        frota[nome] = []
+    frota[nome].append(posicao_navio)
