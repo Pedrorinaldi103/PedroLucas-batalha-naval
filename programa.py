@@ -1,4 +1,6 @@
 from funcoes import *
+import random
+# random.seed(2)
 
 #ex7
 frota = {}
@@ -65,6 +67,8 @@ tabuleiro_do_oponente = posiciona_frota(frota_oponente)
 tabuleiro_do_jogador = posiciona_frota(frota)
 imprime = True
 jogando=True
+linha_oponente=0
+coluna_oponente=0
 while jogando==True:
     if imprime == True:
         print(monta_tabuleiros(tabuleiro_do_jogador, tabuleiro_do_oponente))
@@ -83,9 +87,22 @@ while jogando==True:
     else:
         faz_jogada(tabuleiro_do_oponente,linha_ataque,coluna_ataque)
         imprime = True
-    if afundados(frota_oponente , tabuleiro_do_oponente)==10:
-        print('Parabéns! Você derrubou todos os navios do seu oponente!')
-        jogando=False
+        if afundados(frota_oponente , tabuleiro_do_oponente)==10:
+            print('Parabéns! Você derrubou todos os navios do seu oponente!')
+            jogando=False
+        else:
+            linha_oponente=random.randint(0,9)
+            coluna_oponente=random.randint(0,9)
+            while  tabuleiro_do_jogador[linha_oponente][coluna_oponente]=="X" or tabuleiro_do_jogador[linha_oponente][coluna_oponente]=="-":
+                linha_oponente=random.randint(0,9)
+                coluna_oponente=random.randint(0,9)
+            else:
+                faz_jogada(tabuleiro_do_jogador,linha_oponente,coluna_oponente)
+                print(f'Seu oponente está atacando na linha {linha_oponente} e coluna {coluna_oponente}')
+            if afundados(frota , tabuleiro_do_jogador)==10:
+                print('Xi! O oponente derrubou toda a sua frota =(')
+                jogando=False
+
 
 
     
