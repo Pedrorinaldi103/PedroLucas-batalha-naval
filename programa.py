@@ -63,4 +63,4 @@ for nome,listas in navios.items():
         posicao_navio = define_posicoes(linha, coluna, orientacao, tamanho)
         if nome not in frota:
             frota[nome] = []
-        frota[nome].append(posicao_navio)
+        frota[nome].append(posicao_navio)0
