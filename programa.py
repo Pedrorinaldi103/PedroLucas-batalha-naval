@@ -64,4 +64,4 @@ for nome,listas in navios.items():
         if nome not in frota:
             frota[nome] = []
         frota[nome].append(posicao_navio)
-print(frota)1
+print(frota)
